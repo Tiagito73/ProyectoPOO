@@ -2,7 +2,7 @@ package p1029;
 
 public class Visitante {
 
-    private String nombre;
+    private String name;
     private int edad;
     private int estatura;
     private double dinero;
@@ -11,10 +11,10 @@ public class Visitante {
     private int costo;
 
     // Constructor: valida los datos y calcula el costo
-    public Visitante(String nombre, int edad, int estatura, double dinero,
+    public Visitante(String name, int edad, int estatura, double dinero,
             int tipo, int numAtracciones) {
 
-        if (nombre.isEmpty()) {
+        if (name.isEmpty()) {
             throw new IllegalArgumentException("El nombre no puede estar vacio.");
         }
         if (edad < 0 || edad > 120) {
@@ -36,7 +36,7 @@ public class Visitante {
             throw new IllegalArgumentException("El descuento de estudiante es hasta los 25 años.");
         }
 
-        this.nombre = nombre;
+        this.name = nombre;
         this.edad = edad;
         this.estatura = estatura;
         this.dinero = dinero;
@@ -46,8 +46,8 @@ public class Visitante {
     }
 
     // ---------- Getters ----------
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
     public int getEdad() {
